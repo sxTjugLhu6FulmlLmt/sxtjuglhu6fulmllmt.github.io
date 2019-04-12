@@ -306,7 +306,7 @@
         
           <div class="tag-cloud">
             <div class="tag-cloud-title">
-                目前共计 9 个标签
+                目前共计 7 个标签
             </div>
             <div class="tag-cloud-tags">
               <a href="/tags/demo/" style="font-size: 12px; color: #ccc">demo</a> <a href="/tags/docker/" style="font-size: 12px; color: #ccc">docker</a> <a href="/tags/linux/" style="font-size: 12px; color: #ccc">linux</a> <a href="/tags/one/" style="font-size: 12px; color: #ccc">one</a> <a href="/tags/shell/" style="font-size: 12px; color: #ccc">shell</a> <a href="/tags/test/" style="font-size: 30px; color: #111">test</a> <a href="/tags/utils/" style="font-size: 12px; color: #ccc">utils</a>
@@ -389,7 +389,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -506,6 +506,12 @@
       </div>
     
 
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
     
 
   </div>
@@ -670,6 +676,43 @@
   
 
   
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+          flOptions.iconStyle = "box";
+      
+          flOptions.boxForm = "horizontal";
+      
+          flOptions.position = "middleRight";
+      
+          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
   
 
   
