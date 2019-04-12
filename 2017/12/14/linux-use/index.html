@@ -112,7 +112,7 @@
 
 
 
-  <meta name="keywords" content="test, utils">
+  <meta name="keywords" content="linux, shell, xshell, Screen ,shell高级, pssh, rsync, sed">
 
 
 
@@ -126,16 +126,16 @@
 
 
 <meta name="description" content="生命在于折腾">
-<meta name="keywords" content="test, utils">
+<meta name="keywords" content="linux, shell, xshell, Screen ,shell高级, pssh, rsync, sed">
 <meta property="og:type" content="article">
-<meta property="og:title" content="头部设置">
-<meta property="og:url" content="https://lccsetsun.github.io/2017/12/14/hello-world/index.html">
+<meta property="og:title" content="shell高级使用">
+<meta property="og:url" content="https://lccsetsun.github.io/2017/12/14/linux-use/index.html">
 <meta property="og:site_name" content="setsun">
 <meta property="og:description" content="生命在于折腾">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-12T10:09:18.000Z">
+<meta property="og:updated_time" content="2019-04-12T23:46:06.851Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="头部设置">
+<meta name="twitter:title" content="shell高级使用">
 <meta name="twitter:description" content="生命在于折腾">
 
 
@@ -166,13 +166,13 @@
 
 
 
-  <link rel="canonical" href="https://lccsetsun.github.io/2017/12/14/hello-world/">
+  <link rel="canonical" href="https://lccsetsun.github.io/2017/12/14/linux-use/">
 
 
 
 
 
-  <title>头部设置 | setsun</title>
+  <title>shell高级使用 | setsun</title>
   
 
 
@@ -299,7 +299,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lccsetsun.github.io/2017/12/14/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://lccsetsun.github.io/2017/12/14/linux-use/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="setsun">
@@ -316,7 +316,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">头部设置</h1>
+          <h1 class="post-title" itemprop="name headline">shell高级使用</h1>
         
 
         <div class="post-meta">
@@ -351,8 +351,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/utils/" itemprop="url" rel="index">
-                    <span itemprop="name">utils</span>
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
                   </a>
                 </span>
 
@@ -369,8 +369,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/12/14/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2017/12/14/hello-world/" itemprop="commentCount"></span>
+                <a href="/2017/12/14/linux-use/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/12/14/linux-use/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -392,7 +392,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  36
+                  231
                 </span>
               
 
@@ -433,7 +433,8 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a><br> for more info. If you get any problems when using Hexo,<br><a id="more"></a><br>you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a><br> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+        <h2 id="shell高级命令"><a href="#shell高级命令" class="headerlink" title="shell高级命令"></a>shell高级命令</h2><p>以下是一些常用的linux批量处理和后台处理常用的命令,结合实际工作逻辑<br><a id="more"></a><br>就会变成一个很强大的脚本工具,具体使用场景看个人情况,这里只列举命令的用法,具体操作可在下方评论问答,<br>第一次写博客不知道写点啥,反正以后走技术路线,主要分析java方面,<br>如有不足,请积极指出,还望海涵</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">	linux 去掉文档空格：</span><br><span class="line">		cat list |sed '/^$<span class="string">/d</span>'</span><br><span class="line">	远程同步文件： </span><br><span class="line">	 rsync -avzP <span class="string">/root/data/</span>*<span class="string">.json</span> root@33.82.4.13:<span class="string">/root/lcc/info</span></span><br><span class="line">	查看root下面的文件</span><br><span class="line">	 pssh -h host -i <span class="string">"ll /root/ "</span></span><br><span class="line">	将本地lcc目录拷贝到远程机器admin下面</span><br><span class="line">	 pscp -h host -r <span class="string">/root/lcc</span> <span class="string">/root/admin</span>		</span><br><span class="line">	 </span><br><span class="line">Screen </span><br><span class="line">	关闭窗口</span><br><span class="line">	screen -S w_22_1<span class="params">(name)</span> -X <span class="keyword">quit</span>	 </span><br><span class="line">	建立新的链接</span><br><span class="line">	screen -R screen_name </span><br><span class="line">	</span><br><span class="line">	 crontab <span class="string">/tmp/crontab.bak</span></span><br><span class="line">	 <span class="string">//</span>批量设置定时任务</span><br><span class="line">	 pssh -h hostlist -i <span class="string">"crontab /tmp/crontab.bak"</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -486,12 +487,12 @@
 
         <li class="post-copyright-link">
           <strong>本文标题：</strong>
-          <a href="https://lccsetsun.github.io/2017/12/14/hello-world/" title="头部设置">头部设置</a>
+          <a href="https://lccsetsun.github.io/2017/12/14/linux-use/" title="shell高级使用">shell高级使用</a>
         </li>
 
         <li class="post-copyright-link">
           <strong>本文链接：</strong>
-          <a href="https://lccsetsun.github.io/2017/12/14/hello-world/" title="头部设置">https://lccsetsun.github.io/2017/12/14/hello-world/</a>
+          <a href="https://lccsetsun.github.io/2017/12/14/linux-use/" title="shell高级使用">https://lccsetsun.github.io/2017/12/14/linux-use/</a>
         </li>
 
         <li class="post-copyright-date">
@@ -528,18 +529,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/14/linux-use/" rel="next" title="shell高级使用">
-                <i class="fa fa-chevron-left"></i> shell高级使用
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/04/11/dockerUse/" rel="prev" title="docker 简单使用">
-                docker 简单使用 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/12/14/hello-world/" rel="prev" title="头部设置">
+                头部设置 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -633,8 +630,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -719,6 +725,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#shell高级命令"><span class="nav-number">1.</span> <span class="nav-text">shell高级命令</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
