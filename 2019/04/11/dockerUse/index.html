@@ -125,18 +125,18 @@
 
 
 
-<meta name="description" content="Docker 使用 dockfile使用  1234567891011121314151617FROM openjdk:8-jdk-alpineENV SPRING_OUTPUT_ANSI_ENABLED=ALWAYS \    JHIPSTER_SLEEP=0 \    JAVA_OPTS=&amp;quot;&amp;quot;	# add directly the warADD *.jar /app.jar">
+<meta name="description" content="e# Docker 使用  dockfile使用docker 如何发布jar">
 <meta name="keywords" content="docker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="docker 简单使用">
 <meta property="og:url" content="http://yoursite.com/2019/04/11/dockerUse/index.html">
 <meta property="og:site_name" content="setsun">
-<meta property="og:description" content="Docker 使用 dockfile使用  1234567891011121314151617FROM openjdk:8-jdk-alpineENV SPRING_OUTPUT_ANSI_ENABLED=ALWAYS \    JHIPSTER_SLEEP=0 \    JAVA_OPTS=&amp;quot;&amp;quot;	# add directly the warADD *.jar /app.jar">
+<meta property="og:description" content="e# Docker 使用  dockfile使用docker 如何发布jar">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-12T03:20:37.000Z">
+<meta property="og:updated_time" content="2019-04-12T03:32:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="docker 简单使用">
-<meta name="twitter:description" content="Docker 使用 dockfile使用  1234567891011121314151617FROM openjdk:8-jdk-alpineENV SPRING_OUTPUT_ANSI_ENABLED=ALWAYS \    JHIPSTER_SLEEP=0 \    JAVA_OPTS=&amp;quot;&amp;quot;	# add directly the warADD *.jar /app.jar">
+<meta name="twitter:description" content="e# Docker 使用  dockfile使用docker 如何发布jar">
 
 
 
@@ -370,7 +370,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  599
+                  605
                 </span>
               
 
@@ -407,10 +407,12 @@
       
 
       
-        <h2 id="Docker-使用"><a href="#Docker-使用" class="headerlink" title="Docker 使用"></a>Docker 使用</h2><ul>
-<li>dockfile使用</li>
-</ul>
+        <p>e# Docker 使用</p>
+<ul>
+<li>dockfile使用<br>docker 如何发布jar<a id="more"></a>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">FROM openjdk:8-jdk-alpineENV SPRING_OUTPUT_ANSI_ENABLED=ALWAYS \    </span><br><span class="line">JHIPSTER_SLEEP=0 \    </span><br><span class="line">JAVA_OPTS=&quot;&quot;	</span><br><span class="line"># add directly the war</span><br><span class="line">ADD *.jar /app.jar</span><br><span class="line">#设置运行景象 和北京时间</span><br><span class="line">RUN \    </span><br><span class="line">echo -e &quot;https://mirrors.ustc.edu.cn/alpine/latest-stable/main\nhttps://mirrors.ustc.edu.cn/alpine/latest-stable/community&quot; &gt; /etc/apk/repositories &amp;&amp; \    </span><br><span class="line">apk update &amp;&amp; \    </span><br><span class="line">apk add --no-cache openssh tzdata &amp;&amp; \    </span><br><span class="line">cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &amp;&amp; \    </span><br><span class="line">echo &quot;xiaoshanyunwei&quot; &gt;  /etc/timezone &amp;&amp; \    </span><br><span class="line">rm -rf /var/cache/apk/*</span><br><span class="line">EXPOSE 8094 5701/udp</span><br><span class="line">CMD echo &quot;The application will start in $&#123;JHIPSTER_SLEEP&#125;s...&quot; &amp;&amp; \    </span><br><span class="line">sleep $&#123;JHIPSTER_SLEEP&#125; &amp;&amp; \    </span><br><span class="line">java $&#123;JAVA_OPTS&#125; -Djava.security.egd=file:/dev/./urandom -jar /app.jar</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <ul>
 <li>第二种写法</li>
 </ul>
@@ -597,17 +599,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -684,22 +677,6 @@
       </section>
 
       
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-使用"><span class="nav-number">1.</span> <span class="nav-text">Docker 使用</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
 
       
 
@@ -728,7 +705,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">677</span>
+    <span title="Site words total count">683</span>
   
 </div>
 
@@ -793,8 +770,6 @@
   
 
 
-  
-
 
 
 
@@ -833,11 +808,6 @@
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
@@ -949,6 +919,6 @@
 
   
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 <script type="text/javascript" src="/js/src/love.js"></script>
 </html>
