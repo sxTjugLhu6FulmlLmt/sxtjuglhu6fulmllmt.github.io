@@ -133,7 +133,7 @@
 <meta property="og:site_name" content="setsun">
 <meta property="og:description" content="生命在于折腾">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-12T23:54:36.069Z">
+<meta property="og:updated_time" content="2019-04-13T00:20:30.915Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="shell高级使用">
 <meta name="twitter:description" content="生命在于折腾">
@@ -392,7 +392,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  236
+                  230
                 </span>
               
 
@@ -434,7 +434,7 @@
 
       
         <h2 id="shell高级命令"><a href="#shell高级命令" class="headerlink" title="shell高级命令"></a>shell高级命令</h2><p>以下是一些常用的linux批量处理和后台处理常用的命令,结合实际工作逻辑<br><a id="more"></a><br>就会变成一个很强大的脚本工具,具体使用场景看个人情况,这里只列举命令的用法,具体操作可在下方评论问答,<br>第一次写博客不知道写点啥,反正以后走技术路线,主要分析java方面,<br>如有不足,请积极指出,还望海涵</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">linux 去掉文档空格：</span><br><span class="line">		cat list |sed &apos;/^$/d&apos;</span><br><span class="line">	远程同步文件： </span><br><span class="line">	 rsync -avzP /root/data/*.json root@33.82.4.13:/root/lcc/info</span><br><span class="line">	查看root下面的文件</span><br><span class="line">	 pssh -h host -i &quot;ll /root/ &quot;</span><br><span class="line">	将本地lcc目录拷贝到远程机器admin下面</span><br><span class="line">	 pscp -h host -r /root/lcc /root/admin		</span><br><span class="line">	 </span><br><span class="line">Screen </span><br><span class="line">	关闭窗口</span><br><span class="line">	screen -S w_22_1(name) -X quit	 </span><br><span class="line">	建立新的链接</span><br><span class="line">	screen -R screen_name </span><br><span class="line">	</span><br><span class="line">	 crontab /tmp/crontab.bak</span><br><span class="line">	 //批量设置定时任务</span><br><span class="line">	 pssh -h hostlist -i &quot;crontab /tmp/crontab.bak&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">linux 去掉文档空格：</span><br><span class="line">		cat list |sed <span class="string">'/^$/d'</span></span><br><span class="line">	远程同步文件： </span><br><span class="line">	 rsync -avzP /root/data<span class="comment">/*.json root@33.82.4.13:/root/lcc/info</span></span><br><span class="line"><span class="comment">	查看root下面的文件</span></span><br><span class="line"><span class="comment">	 pssh -h host -i "ll /root/ "</span></span><br><span class="line"><span class="comment">	将本地lcc目录拷贝到远程机器admin下面</span></span><br><span class="line"><span class="comment">	 pscp -h host -r /root/lcc /root/admin		</span></span><br><span class="line"><span class="comment">	 </span></span><br><span class="line"><span class="comment">Screen </span></span><br><span class="line"><span class="comment">	关闭窗口</span></span><br><span class="line"><span class="comment">	screen -S w_22_1(name) -X quit	 </span></span><br><span class="line"><span class="comment">	建立新的链接</span></span><br><span class="line"><span class="comment">	screen -R screen_name </span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">	 crontab /tmp/crontab.bak</span></span><br><span class="line"><span class="comment">	 //批量设置定时任务</span></span><br><span class="line"><span class="comment">	 pssh -h hostlist -i "crontab /tmp/crontab.bak"</span></span><br></pre></td></tr></table></figure>
 <p>​    </p>
 
       
@@ -771,7 +771,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">874</span>
+    <span title="Site words total count">860</span>
   
 </div>
 
