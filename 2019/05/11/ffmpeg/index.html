@@ -112,7 +112,7 @@
 
 
 
-  <meta name="keywords" content="linux, shell, xshell, Screen ,shell高级, pssh, rsync, sed">
+  <meta name="keywords" content="ffmpeg ffplay">
 
 
 
@@ -125,18 +125,17 @@
 
 
 
-<meta name="description" content="生命在于折腾">
-<meta name="keywords" content="linux, shell, xshell, Screen ,shell高级, pssh, rsync, sed">
+<meta name="keywords" content="ffmpeg ffplay">
 <meta property="og:type" content="article">
-<meta property="og:title" content="shell高级使用">
-<meta property="og:url" content="https://lccsetsun.github.io/2019/04/13/linux-use/index.html">
+<meta property="og:title" content="ffmpeg常用命令">
+<meta property="og:url" content="https://lccsetsun.github.io/2019/05/11/ffmpeg/index.html">
 <meta property="og:site_name" content="setsun">
-<meta property="og:description" content="生命在于折腾">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-13T00:20:30.915Z">
+<meta property="og:image" content="https://lccsetsun.github.io/images/1.jpg">
+<meta property="og:updated_time" content="2019-06-07T06:53:19.134Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="shell高级使用">
-<meta name="twitter:description" content="生命在于折腾">
+<meta name="twitter:title" content="ffmpeg常用命令">
+<meta name="twitter:image" content="https://lccsetsun.github.io/images/1.jpg">
 
 
 
@@ -166,13 +165,13 @@
 
 
 
-  <link rel="canonical" href="https://lccsetsun.github.io/2019/04/13/linux-use/">
+  <link rel="canonical" href="https://lccsetsun.github.io/2019/05/11/ffmpeg/">
 
 
 
 
 
-  <title>shell高级使用 | setsun</title>
+  <title>ffmpeg常用命令 | setsun</title>
   
 
 
@@ -294,12 +293,12 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-ffmpeg" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lccsetsun.github.io/2019/04/13/linux-use/">
+    <link itemprop="mainEntityOfPage" href="https://lccsetsun.github.io/2019/05/11/ffmpeg/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="setsun">
@@ -316,7 +315,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">shell高级使用</h1>
+          <h1 class="post-title" itemprop="name headline">ffmpeg常用命令</h1>
         
 
         <div class="post-meta">
@@ -328,8 +327,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-13T07:05:38+08:00">
-                2019-04-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-11T20:05:38+08:00">
+                2019-05-11
               </time>
             
 
@@ -339,28 +338,6 @@
           </span>
 
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux/" itemprop="url" rel="index">
-                    <span itemprop="name">linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -369,8 +346,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/04/13/linux-use/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/13/linux-use/" itemprop="commentCount"></span>
+                <a href="/2019/05/11/ffmpeg/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/11/ffmpeg/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -392,7 +369,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  230
+                  650
                 </span>
               
 
@@ -408,16 +385,12 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  3
                 </span>
               
             </div>
           
 
-          
-              <div class="post-description">
-                  生命在于折腾
-              </div>
           
 
         </div>
@@ -433,10 +406,27 @@
       
 
       
-        <h2 id="shell高级命令"><a href="#shell高级命令" class="headerlink" title="shell高级命令"></a>shell高级命令</h2><p>以下是一些常用的linux批量处理和后台处理常用的命令,结合实际工作逻辑<br><a id="more"></a><br>就会变成一个很强大的脚本工具,具体使用场景看个人情况,这里只列举命令的用法,具体操作可在下方评论问答,<br>第一次写博客不知道写点啥,反正以后走技术路线,主要分析java方面,<br>如有不足,请积极指出,还望海涵</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">linux 去掉文档空格：</span><br><span class="line">		cat list |sed <span class="string">'/^$/d'</span></span><br><span class="line">	远程同步文件： </span><br><span class="line">	 rsync -avzP /root/data<span class="comment">/*.json root@33.82.4.13:/root/lcc/info</span></span><br><span class="line"><span class="comment">	查看root下面的文件</span></span><br><span class="line"><span class="comment">	 pssh -h host -i "ll /root/ "</span></span><br><span class="line"><span class="comment">	将本地lcc目录拷贝到远程机器admin下面</span></span><br><span class="line"><span class="comment">	 pscp -h host -r /root/lcc /root/admin		</span></span><br><span class="line"><span class="comment">	 </span></span><br><span class="line"><span class="comment">Screen </span></span><br><span class="line"><span class="comment">	关闭窗口</span></span><br><span class="line"><span class="comment">	screen -S w_22_1(name) -X quit	 </span></span><br><span class="line"><span class="comment">	建立新的链接</span></span><br><span class="line"><span class="comment">	screen -R screen_name </span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">	 crontab /tmp/crontab.bak</span></span><br><span class="line"><span class="comment">	 //批量设置定时任务</span></span><br><span class="line"><span class="comment">	 pssh -h hostlist -i "crontab /tmp/crontab.bak"</span></span><br></pre></td></tr></table></figure>
-<p>​    </p>
-
+        <p><img src="/images/1.jpg" alt="java8"></p>
+<a id="more"></a>
+<h2 id="ffmpeg"><a href="#ffmpeg" class="headerlink" title="ffmpeg"></a>ffmpeg</h2><h3 id="桌面录制"><a href="#桌面录制" class="headerlink" title="桌面录制"></a>桌面录制</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -f avfoundation -i <span class="string">"1"</span> -vcodec libx264 -preset ultrafast -acodec libfaac -f flv ~/Movies/output.flv</span><br></pre></td></tr></table></figure>
+<h3 id="摄像头录制"><a href="#摄像头录制" class="headerlink" title="摄像头录制"></a>摄像头录制</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -f avfoundation -framerate <span class="number">30</span> -i <span class="string">"0:0"</span> -vcodec libx264 -preset veryfast -f flv test.mkv</span><br></pre></td></tr></table></figure>
+<h3 id="将ts流转h264裸流"><a href="#将ts流转h264裸流" class="headerlink" title="将ts流转h264裸流"></a>将ts流转h264裸流</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i test.ts -c:v libx264 h264test.h264</span><br></pre></td></tr></table></figure>
+<h3 id="将ts流转mp4"><a href="#将ts流转mp4" class="headerlink" title="将ts流转mp4"></a>将ts流转mp4</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i <span class="number">1047</span>.ts -vcodec copy -f mp4 <span class="number">1047</span>.mp4</span><br></pre></td></tr></table></figure>
+<h3 id="拼接视频"><a href="#拼接视频" class="headerlink" title="拼接视频"></a>拼接视频</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//准备avi.txt. </span></span><br><span class="line">vim avi.txt</span><br><span class="line"><span class="number">1</span>.mp4</span><br><span class="line"><span class="number">2</span>.mp4</span><br><span class="line">ffmpeg -f concat -safe <span class="number">0</span> -<span class="selector-tag">i</span> avi<span class="selector-class">.txt</span> -c copy output.mp4</span><br></pre></td></tr></table></figure>
+<h3 id="截取指定位置的图片"><a href="#截取指定位置的图片" class="headerlink" title="截取指定位置的图片"></a>截取指定位置的图片</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ffmpeg</span> <span class="selector-tag">-ss</span> 00<span class="selector-pseudo">:02</span><span class="selector-pseudo">:06</span> <span class="selector-tag">-i</span> <span class="selector-tag">test1</span><span class="selector-class">.flv</span> <span class="selector-tag">-f</span> <span class="selector-tag">image2</span> <span class="selector-tag">-y</span> <span class="selector-tag">test1</span><span class="selector-class">.jpg</span></span><br></pre></td></tr></table></figure>
+<h2 id="FFMPEG推流到RTMP服务器命令"><a href="#FFMPEG推流到RTMP服务器命令" class="headerlink" title="FFMPEG推流到RTMP服务器命令"></a>FFMPEG推流到RTMP服务器命令</h2><h3 id="将文件当作源推送到RTMP服务器"><a href="#将文件当作源推送到RTMP服务器" class="headerlink" title="将文件当作源推送到RTMP服务器"></a>将文件当作源推送到RTMP服务器</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -re -i localFile.mp4 -c copy -f flv rtmp:<span class="comment">//server/live/streamName</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>参数解释<br>-r 以本地帧频读数据，主要用于模拟捕获设备。表示ffmpeg将按照帧率发送数据，不会按照最高的效率发送</li>
+</ul>
+<h3 id="将直播文件保存至本地"><a href="#将直播文件保存至本地" class="headerlink" title="将直播文件保存至本地"></a>将直播文件保存至本地</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i rtmp:<span class="comment">//server/live/streamName -c copy dump.flv</span></span><br></pre></td></tr></table></figure>
+<h3 id="将其中一个直播流中的视频改用H-264压缩，音频不变，推送到另外一个直播服务器"><a href="#将其中一个直播流中的视频改用H-264压缩，音频不变，推送到另外一个直播服务器" class="headerlink" title="将其中一个直播流中的视频改用H.264压缩，音频不变，推送到另外一个直播服务器"></a>将其中一个直播流中的视频改用H.264压缩，音频不变，推送到另外一个直播服务器</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i rtmp:<span class="comment">//server/live/originalStream -c:a copy -c:v libx264 -vpre slow -f flv rtmp://server/live/h264Stream</span></span><br></pre></td></tr></table></figure>
+<h3 id="将其中一个直播流中的视频改用H-264压缩，音频改用aac压缩，推送到另外一个直播服务器"><a href="#将其中一个直播流中的视频改用H-264压缩，音频改用aac压缩，推送到另外一个直播服务器" class="headerlink" title="将其中一个直播流中的视频改用H.264压缩，音频改用aac压缩，推送到另外一个直播服务器"></a>将其中一个直播流中的视频改用H.264压缩，音频改用aac压缩，推送到另外一个直播服务器</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i rtmp:<span class="comment">//server/live/originalStream -c:a libfaac -ar 44100 -ab 48k -c:v libx264 -vpre slow -vpre baseline -f flv rtmp://server/live/h264Stream</span></span><br></pre></td></tr></table></figure>
+<h3 id="将其中一个直播流中的视频不变，音频改用aac压缩，推送到另外一个直播服务器"><a href="#将其中一个直播流中的视频不变，音频改用aac压缩，推送到另外一个直播服务器" class="headerlink" title="将其中一个直播流中的视频不变，音频改用aac压缩，推送到另外一个直播服务器"></a>将其中一个直播流中的视频不变，音频改用aac压缩，推送到另外一个直播服务器</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i rtmp:<span class="comment">//server/live/originalStream -acodec libfaac -ar 44100 -ab 48k -vcodec copy -f flv rtmp://server/live/h264_AAC_Stream</span></span><br></pre></td></tr></table></figure>
+<h3 id="将一个高清流复制为几个不同清晰度的流重新发布，其中音频不变"><a href="#将一个高清流复制为几个不同清晰度的流重新发布，其中音频不变" class="headerlink" title="将一个高清流复制为几个不同清晰度的流重新发布，其中音频不变"></a>将一个高清流复制为几个不同清晰度的流重新发布，其中音频不变</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -re -i rtmp:<span class="comment">//server/live/high_FMLE_stream -acodec copy -vcodec x264lib -s 640×360 -b 500k -vpre medium -vpre baseline rtmp://server/live/baseline_500k -acodec copy -vcodec x264lib -s 480×272 -b 300k -vpre medium -vpre baseline rtmp://server/live/baseline_300k -acodec copy -vcodec x264lib -s 320×200 -b 150k -vpre medium -vpre baseline rtmp://server/live/baseline_150k -acodec libfaac -vn -ab 48k rtmp://server/live/audio_only_AAC_48k</span></span><br></pre></td></tr></table></figure>
+<h3 id="将当前摄像头以及扬声器通过DSHOW采集，使用H-264-AAC压缩后推送到RTMP服务器"><a href="#将当前摄像头以及扬声器通过DSHOW采集，使用H-264-AAC压缩后推送到RTMP服务器" class="headerlink" title="将当前摄像头以及扬声器通过DSHOW采集，使用H.264/AAC压缩后推送到RTMP服务器"></a>将当前摄像头以及扬声器通过DSHOW采集，使用H.264/AAC压缩后推送到RTMP服务器</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -r <span class="number">25</span> -f dshow -s <span class="number">640</span>×<span class="number">480</span> -i video=”video source name”:audio=”audio source name” -vcodec libx264 -b <span class="number">600</span>k -vpre slow -acodec libfaac -ab <span class="number">128</span>k -f flv rtmp:<span class="comment">//server/application/stream_name</span></span><br></pre></td></tr></table></figure>
+<h3 id="将一个JPG图片经过H-264压缩后输出为MP4文件"><a href="#将一个JPG图片经过H-264压缩后输出为MP4文件" class="headerlink" title="将一个JPG图片经过H.264压缩后输出为MP4文件"></a>将一个JPG图片经过H.264压缩后输出为MP4文件</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i INPUT.jpg -an -vcodec libx264 -coder <span class="number">1</span> -flags +loop -cmp +chroma -subq <span class="number">10</span> -qcomp <span class="number">0.6</span> -qmin <span class="number">10</span> -qmax <span class="number">51</span> -qdiff <span class="number">4</span> -flags2 +dct8x8 -trellis <span class="number">2</span> -partitions +parti8x8+parti4x4 -crf <span class="number">24</span> -threads <span class="number">0</span> -r <span class="number">25</span> -g <span class="number">25</span> -y OUTPUT.mp4</span><br></pre></td></tr></table></figure>
+<h3 id="将MP3转化为AAC"><a href="#将MP3转化为AAC" class="headerlink" title="将MP3转化为AAC"></a>将MP3转化为AAC</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i <span class="number">20120814164324_205</span>.wav -acodec  libfaac -ab <span class="number">64</span>k -ar <span class="number">44100</span>  output.aac</span><br></pre></td></tr></table></figure>
+<h3 id="将AAC文件转化为flv文件，编码格式采用AAC"><a href="#将AAC文件转化为flv文件，编码格式采用AAC" class="headerlink" title="将AAC文件转化为flv文件，编码格式采用AAC"></a>将AAC文件转化为flv文件，编码格式采用AAC</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i output.aac -acodec libfaac -y -ab <span class="number">32</span> -ar <span class="number">44100</span> -qscale <span class="number">10</span> -s <span class="number">640</span>*<span class="number">480</span> -r <span class="number">15</span> output.flv</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -488,16 +478,16 @@
 
         <li class="post-copyright-link">
           <strong>本文标题：</strong>
-          <a href="https://lccsetsun.github.io/2019/04/13/linux-use/" title="shell高级使用">shell高级使用</a>
+          <a href="https://lccsetsun.github.io/2019/05/11/ffmpeg/" title="ffmpeg常用命令">ffmpeg常用命令</a>
         </li>
 
         <li class="post-copyright-link">
           <strong>本文链接：</strong>
-          <a href="https://lccsetsun.github.io/2019/04/13/linux-use/" title="shell高级使用">https://lccsetsun.github.io/2019/04/13/linux-use/</a>
+          <a href="https://lccsetsun.github.io/2019/05/11/ffmpeg/" title="ffmpeg常用命令">https://lccsetsun.github.io/2019/05/11/ffmpeg/</a>
         </li>
 
         <li class="post-copyright-date">
-            <strong>发布时间：</strong>2019年4月13日 - 07时04分
+            <strong>发布时间：</strong>2019年5月11日 - 20时05分
         </li>  
 
         <li class="post-copyright-license">
@@ -530,8 +520,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/11/dockerUse/" rel="next" title="docker 简单使用">
-                <i class="fa fa-chevron-left"></i> docker 简单使用
+              <a href="/2019/05/11/Java8_school/" rel="next" title="java8的Stream特性">
+                <i class="fa fa-chevron-left"></i> java8的Stream特性
               </a>
             
           </div>
@@ -540,8 +530,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/04/20/elk/" rel="prev" title="elasticsearch 集群搭建">
-                elasticsearch 集群搭建 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/05/19/HashMap实现原理及源码分析/" rel="prev" title="HashMap实现原理及源码分析">
+                HashMap实现原理及源码分析 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -662,7 +652,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -684,7 +674,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -739,7 +729,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#shell高级命令"><span class="nav-number">1.</span> <span class="nav-text">shell高级命令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ffmpeg"><span class="nav-number">1.</span> <span class="nav-text">ffmpeg</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#桌面录制"><span class="nav-number">1.1.</span> <span class="nav-text">桌面录制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#摄像头录制"><span class="nav-number">1.2.</span> <span class="nav-text">摄像头录制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将ts流转h264裸流"><span class="nav-number">1.3.</span> <span class="nav-text">将ts流转h264裸流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将ts流转mp4"><span class="nav-number">1.4.</span> <span class="nav-text">将ts流转mp4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拼接视频"><span class="nav-number">1.5.</span> <span class="nav-text">拼接视频</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#截取指定位置的图片"><span class="nav-number">1.6.</span> <span class="nav-text">截取指定位置的图片</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FFMPEG推流到RTMP服务器命令"><span class="nav-number">2.</span> <span class="nav-text">FFMPEG推流到RTMP服务器命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#将文件当作源推送到RTMP服务器"><span class="nav-number">2.1.</span> <span class="nav-text">将文件当作源推送到RTMP服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将直播文件保存至本地"><span class="nav-number">2.2.</span> <span class="nav-text">将直播文件保存至本地</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将其中一个直播流中的视频改用H-264压缩，音频不变，推送到另外一个直播服务器"><span class="nav-number">2.3.</span> <span class="nav-text">将其中一个直播流中的视频改用H.264压缩，音频不变，推送到另外一个直播服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将其中一个直播流中的视频改用H-264压缩，音频改用aac压缩，推送到另外一个直播服务器"><span class="nav-number">2.4.</span> <span class="nav-text">将其中一个直播流中的视频改用H.264压缩，音频改用aac压缩，推送到另外一个直播服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将其中一个直播流中的视频不变，音频改用aac压缩，推送到另外一个直播服务器"><span class="nav-number">2.5.</span> <span class="nav-text">将其中一个直播流中的视频不变，音频改用aac压缩，推送到另外一个直播服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将一个高清流复制为几个不同清晰度的流重新发布，其中音频不变"><span class="nav-number">2.6.</span> <span class="nav-text">将一个高清流复制为几个不同清晰度的流重新发布，其中音频不变</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将当前摄像头以及扬声器通过DSHOW采集，使用H-264-AAC压缩后推送到RTMP服务器"><span class="nav-number">2.7.</span> <span class="nav-text">将当前摄像头以及扬声器通过DSHOW采集，使用H.264/AAC压缩后推送到RTMP服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将一个JPG图片经过H-264压缩后输出为MP4文件"><span class="nav-number">2.8.</span> <span class="nav-text">将一个JPG图片经过H.264压缩后输出为MP4文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将MP3转化为AAC"><span class="nav-number">2.9.</span> <span class="nav-text">将MP3转化为AAC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将AAC文件转化为flv文件，编码格式采用AAC"><span class="nav-number">2.10.</span> <span class="nav-text">将AAC文件转化为flv文件，编码格式采用AAC</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -774,7 +764,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">6k</span>
+    <span title="Site words total count">14.6k</span>
   
 </div>
 
